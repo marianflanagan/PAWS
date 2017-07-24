@@ -5,4 +5,42 @@ package com.example.marianflanagan.paws.databaseOperations;
  */
 
 public class FirebaseManager {
+
+    //Customer Sign in
+
+
+
+
+
+
+
+
+    //Pet Sitter Sign in
+
+
+
+    //Customer Register
+
+
+
+
+
+
+
+
+    //Pet Sitter Register
+
+
+    //Pet Details
+
+
+
+
+
+
+    //
+
+    //Read from database
+
+    //write to database
 }
