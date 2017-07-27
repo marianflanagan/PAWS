@@ -1,4 +1,4 @@
-package com.example.marianflanagan.paws.PetSitter;
+package com.example.marianflanagan.paws.pet_sitter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.marianflanagan.paws.Home.ActivityLogin;
+import com.example.marianflanagan.paws.home.ActivityLogin;
 import com.example.marianflanagan.paws.R;
-import com.example.marianflanagan.paws.Model.PetSitter;
+import com.example.marianflanagan.paws.model.PetSitter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -97,6 +97,8 @@ public class PetSitterProfile extends AppCompatActivity{
 
             }
         });
+
+
     }
 
 
