@@ -9,15 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.marianflanagan.paws.Customer.BookingServices;
-import com.example.marianflanagan.paws.Customer.CustomerLogin;
-import com.example.marianflanagan.paws.Customer.CustomerProfile;
-import com.example.marianflanagan.paws.Customer.EditCustomerDetails;
-import com.example.marianflanagan.paws.Customer.MyPets;
 import com.example.marianflanagan.paws.Home.ActivityLogin;
 import com.example.marianflanagan.paws.R;
-import com.example.marianflanagan.paws.model.PetSitter;
-import com.example.marianflanagan.paws.model.User;
+import com.example.marianflanagan.paws.Model.PetSitter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,7 +56,7 @@ public class PetSitterProfile extends AppCompatActivity{
         myRef.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
+                PetSitter user = dataSnapshot.getValue(PetSitter.class);
                 if(user != null) {
                     tvName.setText(String.format(user.getName()));
                 }

@@ -1,4 +1,4 @@
-package com.example.marianflanagan.paws.model;
+package com.example.marianflanagan.paws.Model;
 
 /**
  * Created by marianflanagan on 26/07/2017.
