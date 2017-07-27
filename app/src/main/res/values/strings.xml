@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Paws</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="pet_sitter_login">Pet Sitter Login</string>
+    <string name="customer_login">Customer Login</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="edit_profile_details">Edit Profile Details</string>
+    <string name="add_pet_details">Add Pet Details</string>
+    <string name="edit_pet_details">Edit Pet Details</string>
+    <string name="book_pet_sitting_service">Book Pet Sitting Service</string>
+    <string name="book_services">Book Services</string>
+    <string name="bio">Bio</string>
+    <string name="view_bookings">View Bookings</string>
+    <string name="select_pet">Select Pet</string>
+    <string name="next">Next</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_date">Select Date</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="date">Date</string>
+    <string name="my_pets">My Pets</string>
+    <string name="title_activity_customer_profile">CustomerProfile</string>
+    <string name="title_activity_profile_customer">ProfileCustomer</string>
+    <string name="change_profile_picture">Change Profile Picture</string>
+    <string name="telephone_number">Telephone Number</string>
+    <string name="save">Save</string>
+    <string name="about_me">About Me</string>
+    <string name="what_breed_is_your_dog">What breed is your dog?</string>
+    <string name="what_age_is_your_dog">What age is your dog?</string>
+    <string name="save_details">Save Details</string>
+    <string name="name_of_your_dog">Name of your dog</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="minimum_password" />
+    <string name="full_name">Full Name</string>
+    <string name="logout">Logout</string>
+    <string name="click_to_add_pet_details">Click to add pet details</string>
+    <string name="register">Register</string>
+    <string name="success_message">Registration Successful!!!</string>
+    <string name="details_validation_error_message">All fields must be filled</string>
+    <string name="dog_entry_success_message">Dog successfuly entered!!!</string>
+</resources>

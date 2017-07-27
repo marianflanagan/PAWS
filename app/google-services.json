@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "578580071015",
+    "firebase_url": "https://paws-928db.firebaseio.com",
+    "project_id": "paws-928db",
+    "storage_bucket": "paws-928db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578580071015:android:6eaf40ff9fdade0c",
+        "android_client_info": {
+          "package_name": "com.example.marianflanagan.paws"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578580071015-49mj3qe6gba4eeh654s2jl6rpkg5l539.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marianflanagan.paws",
+            "certificate_hash": "3827b826f60574c049dfa08a4147c168a177d059"
+          }
+        },
+        {
+          "client_id": "578580071015-6vtbvp0e6rt627uuhkerui1qmd5v27mi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_c-r8lMbw9aJP7MOMrbfxYBgXqo-s9U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578580071015-6vtbvp0e6rt627uuhkerui1qmd5v27mi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
