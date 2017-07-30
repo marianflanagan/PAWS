@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.marianflanagan.paws.customer.PetSitterSelection">
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/select_pet_sitter"/>
+        android:id="@+id/pet_sitter"/>
+
+
 </LinearLayout>

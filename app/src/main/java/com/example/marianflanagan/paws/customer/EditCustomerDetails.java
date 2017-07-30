@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.marianflanagan.paws.R;
 import com.example.marianflanagan.paws.model.User;
+import com.example.marianflanagan.paws.pet_sitter.EditPetSitterDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -66,6 +67,8 @@ public class EditCustomerDetails extends AppCompatActivity {
 
                 FirebaseUser currentUser = mAuth.getCurrentUser();
                 String userID = currentUser.getUid();
+
+                Toast.makeText(EditCustomerDetails.this, R.string.details_added_sucess_message, Toast.LENGTH_LONG).show();
 
                 User user = new User(newName, newTelephone, newAddress);
                 myRef.child(userID).setValue(user);

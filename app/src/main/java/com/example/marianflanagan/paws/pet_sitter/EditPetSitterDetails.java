@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.marianflanagan.paws.R;
+import com.example.marianflanagan.paws.customer.PetDetails;
 import com.example.marianflanagan.paws.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,9 +41,9 @@ public class EditPetSitterDetails extends AppCompatActivity {
 
         //declaring variables
 
+        ps_address = (EditText) findViewById(R.id.ps_address);
         ps_name = (EditText) findViewById(R.id.ps_name);
         ps_phone = (EditText) findViewById(R.id.ps_phone);
-        ps_address = (EditText) findViewById(R.id.ps_address);
         buttonPSave = (Button) findViewById(R.id.buttonPSave);
 
 
@@ -56,11 +57,12 @@ public class EditPetSitterDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Attempting to add data to database.");
-                String newName = ps_name.getText().toString();
-                String newAddress = ps_phone.getText().toString();
-                String newTelephone = ps_address.getText().toString();
 
-                if (newName.equals("") || newAddress.equals("") || newTelephone.equals("")) {
+                String newName = ps_name.getText().toString();
+                String newAddress = ps_address.getText().toString();
+                String newTelephone = ps_phone.getText().toString();
+
+                if ( newName.equals("") || newAddress.equals("") || newTelephone.equals("")) {
                     Toast.makeText(com.example.marianflanagan.paws.pet_sitter.EditPetSitterDetails.this, R.string.details_validation_error_message, Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -68,10 +70,15 @@ public class EditPetSitterDetails extends AppCompatActivity {
                 FirebaseUser currentUser = mAuth.getCurrentUser();
                 String userID = currentUser.getUid();
 
+                Toast.makeText(EditPetSitterDetails.this, R.string.details_added_sucess_message, Toast.LENGTH_LONG).show();
+
                 User user = new User(newName, newTelephone, newAddress);
                 myRef.child(userID).setValue(user);
-                ps_address.setText("");
+
                 ps_name.setText("");
+
+                ps_address.setText("");
+
                 ps_phone.setText("");
 
             }

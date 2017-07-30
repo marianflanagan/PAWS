@@ -8,14 +8,20 @@ public class PetSitter {
     String name;
     String phone;
     String address;
+    String userId;
+
+
+
+
 
     public PetSitter() {
     }
 
-    public PetSitter(String name, String phone, String address) {
+    public PetSitter(String name, String phone, String address, String userId) {
         this.name = name;
         this.phone = phone;
         this.address = address;
+        this.userId = userId;
     }
 
     public String getName() {
@@ -41,4 +47,11 @@ public class PetSitter {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getUserId() { return userId; }
+
+    public void setUserId(String userId) {this.userId = userId; }
+
+
+
 }

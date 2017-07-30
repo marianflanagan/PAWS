@@ -55,4 +55,5 @@
     <string name="success_message">Registration Successful!!!</string>
     <string name="details_validation_error_message">All fields must be filled</string>
     <string name="dog_entry_success_message">Dog successfuly entered!!!</string>
+    <string name="details_added_sucess_message">Details added successfully!!</string>
 </resources>
