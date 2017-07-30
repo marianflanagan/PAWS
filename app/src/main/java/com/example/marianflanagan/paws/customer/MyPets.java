@@ -17,11 +17,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyPets extends AppCompatActivity {
+
+    private static final String TAG = "MyPets";
 
     private FloatingActionButton floatingbtn;
     private FirebaseAuth mAuth;

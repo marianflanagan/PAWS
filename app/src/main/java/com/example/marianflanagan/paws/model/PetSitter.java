@@ -12,8 +12,6 @@ public class PetSitter {
 
 
 
-
-
     public PetSitter() {
     }
 
@@ -48,10 +46,12 @@ public class PetSitter {
         this.address = address;
     }
 
-    public String getUserId() { return userId; }
+    public String getUserId() {
+        return userId;
+    }
 
-    public void setUserId(String userId) {this.userId = userId; }
-
-
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
 }

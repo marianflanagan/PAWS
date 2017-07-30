@@ -36,6 +36,7 @@ public class CustomerProfile extends AppCompatActivity {
     private ImageView profile_pic;
     private Button btn_details;
     private Button btn_bookings;
+    private Button btn_vBookings;
     private Button btnClogout;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
@@ -56,6 +57,7 @@ public class CustomerProfile extends AppCompatActivity {
         profile_pic = (ImageView) findViewById(R.id.profile_pic);
         btn_details = (Button) findViewById(R.id.btn_details);
         btn_bookings = (Button) findViewById(R.id.btn_bookings);
+        btn_vBookings = (Button) findViewById(R.id.btn_vBookings);
         btnClogout = (Button) findViewById(R.id.btnClogout);
 
         myRef.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
@@ -91,16 +93,26 @@ public class CustomerProfile extends AppCompatActivity {
         btn_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(CustomerProfile.this, EditCustomerDetails.class);
-                startActivity(i);
+                Intent intent = new Intent(CustomerProfile.this, EditCustomerDetails.class);
+                startActivity(intent);
             }
         });
 
         btn_bookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(CustomerProfile.this, BookingServices.class);
-                startActivity(i);
+                Intent intent = new Intent(CustomerProfile.this, BookingServices.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_vBookings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CustomerProfile.this, CustomerViewBookings.class);
+                startActivity(intent);
+
+
             }
         });
 
@@ -110,12 +122,14 @@ public class CustomerProfile extends AppCompatActivity {
             public void onClick(View view) {
                 mAuth.signOut();
                 toastMsg("Signing Out");
-                Intent i = new Intent(CustomerProfile.this, ActivityLogin.class);
-                startActivity(i);
+                Intent intent = new Intent(CustomerProfile.this, ActivityLogin.class);
+                startActivity(intent);
 
 
             }
         });
+
+
     }
 
     private void goToPetsScreen() {

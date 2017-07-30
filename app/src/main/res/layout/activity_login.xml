@@ -18,6 +18,14 @@
         android:scaleType="fitXY"
         android:src="@drawable/puppy_background" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paws_logo_mobile"
+        android:layout_above="@+id/btn_customer_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <Button
         android:id="@+id/btn_customer_login"
         android:layout_width="wrap_content"

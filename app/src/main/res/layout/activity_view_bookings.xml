@@ -6,7 +6,8 @@
     tools:context="com.example.marianflanagan.paws.pet_sitter.ViewBookings">
 
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/view_bookings"/>
 </LinearLayout>

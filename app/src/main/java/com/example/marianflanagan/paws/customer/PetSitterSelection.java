@@ -14,7 +14,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +21,11 @@ public class PetSitterSelection extends AppCompatActivity {
 
     private static final String TAG = "PetSitterSelection";
 
-    private ListView pet_sitter;
+
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
+    private ListView pet_sitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class PetSitterSelection extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabase.getReference("petSitter");
+
         pet_sitter = (ListView) findViewById(R.id.pet_sitter);
 
         //retrieving the name from Firebase for the list view
@@ -44,9 +45,9 @@ public class PetSitterSelection extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<String> petSitterNames = new ArrayList<String>();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    PetSitter petSitter = postSnapshot.getValue(PetSitter.class);
-                    if (mAuth.getCurrentUser().getUid().equals(petSitter.getUserId())){
-                        petSitterNames.add(petSitter.getName());
+                    PetSitter sitter = postSnapshot.getValue(PetSitter.class);
+                    if (mAuth.getCurrentUser().getUid().equals(sitter.getUserId())){
+                        petSitterNames.add(sitter.getName());
                     }
                 }
 
@@ -56,6 +57,7 @@ public class PetSitterSelection extends AppCompatActivity {
                         pet_sitter.setAdapter(arrayAdapter);
 
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
