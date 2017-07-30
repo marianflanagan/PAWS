@@ -12,7 +12,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:srcCompat="@mipmap/ic_launcher_round"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -22,8 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/edit_profile_details"
-        android:layout_marginTop="78dp"
-        android:layout_below="@+id/textViewPets"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -31,7 +30,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/book_services"
-        android:layout_marginTop="25dp"
         android:layout_below="@+id/btn_details"
         android:layout_alignLeft="@+id/btn_details"
         android:layout_alignStart="@+id/btn_details"
@@ -43,12 +41,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logout"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/btn_bookings"
-        android:layout_alignLeft="@+id/btn_bookings"
-        android:layout_alignStart="@+id/btn_bookings"
-        android:layout_alignRight="@+id/btn_bookings"
-        android:layout_alignEnd="@+id/btn_bookings" />
+        android:layout_below="@+id/btn_vBookings"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btn_vBookings"
+        android:layout_alignStart="@+id/btn_vBookings"
+        android:layout_alignRight="@+id/btn_vBookings"
+        android:layout_alignEnd="@+id/btn_vBookings" />
 
     <TextView
         android:id="@+id/textViewPets"
@@ -56,7 +54,7 @@
         android:layout_height="wrap_content"
         android:text="@string/my_pets"
         android:textSize="18sp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="31dp"
         android:layout_below="@+id/profile_pic"
         android:layout_centerHorizontal="true" />
 
@@ -68,5 +66,15 @@
         android:layout_centerHorizontal="true"
         android:hint="@string/click_to_add_pet_details" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vBookings"
+        android:text="View Bookings"
+        android:layout_below="@+id/btn_bookings"
+        android:layout_alignLeft="@+id/btn_bookings"
+        android:layout_alignStart="@+id/btn_bookings"
+        android:layout_alignRight="@+id/btn_bookings"
+        android:layout_alignEnd="@+id/btn_bookings" />
 
 </RelativeLayout>

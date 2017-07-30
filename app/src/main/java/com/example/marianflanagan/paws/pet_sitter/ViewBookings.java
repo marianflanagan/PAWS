@@ -7,6 +7,10 @@ import com.example.marianflanagan.paws.R;
 
 public class ViewBookings extends AppCompatActivity {
 
+
+    private static final String TAG = "ViewBookings";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
