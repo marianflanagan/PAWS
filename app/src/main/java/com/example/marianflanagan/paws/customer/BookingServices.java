@@ -26,7 +26,8 @@ import java.util.List;
  * Referencing Calendar Activity
  * @reference https://www.youtube.com/watch?v=hHjFIG0TtA0&index=27&list=PLgCYzUzKIBE8TUoCyjomGFqzTFcJ05OaC&t=5s
  *
- *
+ * Remainder of the class was created by Marian Flanagan
+ * Student ID - x16119444
  */
 
 public class BookingServices extends AppCompatActivity {
@@ -35,8 +36,9 @@ public class BookingServices extends AppCompatActivity {
 
     private TextView tvDate;
     private Button btnCalendar;
+    private Button btnNext;
     private Spinner petSpinner;
-
+    private Spinner spinnerTime;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
@@ -48,7 +50,27 @@ public class BookingServices extends AppCompatActivity {
 
         tvDate = (TextView) findViewById(R.id.tvDate);
         btnCalendar = (Button) findViewById(R.id.btnCalendar);
+        btnNext = (Button) findViewById(R.id.btnNext);
         petSpinner = (Spinner) findViewById(R.id.spinnerPet);
+        spinnerTime = (Spinner)  findViewById(R.id.spinnerTime);
+
+
+    //method adding times to spinner
+
+        ArrayList<String> times = new ArrayList<>();
+        times.add("8am");
+        times.add("9am");
+        times.add("10am");
+        times.add("11am");
+        times.add("12pm");
+        times.add("1pm");
+        times.add("2pm");
+        times.add("3pm");
+        times.add("4pm");
+        times.add("5pm");
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, times);
+        spinnerTime.setAdapter(adapter);
 
         //method to retrieve the date information selected from the calendar activity
 
@@ -77,7 +99,7 @@ public class BookingServices extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.e("brian", databaseError.getMessage());
+                Log.e("marian", databaseError.getMessage());
             }
         });
 
@@ -85,8 +107,16 @@ public class BookingServices extends AppCompatActivity {
         btnCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(BookingServices.this, Calendar.class);
-                startActivity(i);
+                Intent intent = new Intent(BookingServices.this, Calendar.class);
+                startActivity(intent);
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BookingServices.this, PetSitterSelection.class);
+                startActivity(intent);
             }
         });
 

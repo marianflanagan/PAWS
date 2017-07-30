@@ -35,9 +35,10 @@ public class PetDetails extends AppCompatActivity {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabase.getReference("dogs");
 
-        dogBreed = (EditText) findViewById(R.id.etBreed);
-        dogAge = (EditText) findViewById(R.id.etAge);
         dogName = (EditText) findViewById(R.id.etPetName);
+        dogAge = (EditText) findViewById(R.id.etAge);
+        dogBreed = (EditText) findViewById(R.id.etBreed);
+
 
         saveDetailsButton = (Button) findViewById(R.id.pet_details);
 
@@ -56,8 +57,8 @@ public class PetDetails extends AppCompatActivity {
                 FirebaseUser currentUser = mAuth.getCurrentUser();
                 String userID = currentUser.getUid();
 
-                Dog dog = new Dog(newDogName, newDogAge, newDogBreed, userID);
-                myRef.child(dog.getName() + newDogAge + newDogBreed).setValue(dog);
+                Dog dog = new Dog(newDogName, newDogBreed,newDogAge ,userID);
+                myRef.child(dog.getName() + newDogBreed + newDogAge ).setValue(dog);
 
                 Toast.makeText(PetDetails.this, R.string.dog_entry_success_message, Toast.LENGTH_LONG).show();
                 dogBreed.setText("");

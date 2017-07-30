@@ -20,6 +20,13 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="31dp"
         android:layout_marginEnd="31dp"
-        android:layout_marginBottom="24dp"
-        android:onClick="btnfloatingbtn_Click"/>
+        android:layout_marginBottom="24dp"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_pets">
+    </ListView>
+
 </RelativeLayout>
