@@ -34,7 +34,6 @@
         <activity android:name=".customer.PetDetails" />
         <activity android:name=".customer.PetSitterSelection" />
         <activity android:name=".customer.EditCustomerDetails" />
-        <activity android:name=".pet_sitter.ViewBookings" />
         <activity android:name=".pet_sitter.EditPetSitterDetails" />
         <activity android:name=".customer.Calendar" />
         <activity android:name=".customer.MyPets" />

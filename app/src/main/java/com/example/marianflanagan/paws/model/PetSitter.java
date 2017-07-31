@@ -1,7 +1,8 @@
 package com.example.marianflanagan.paws.model;
 
 /**
- * Created by marianflanagan on 27/07/2017.
+ * Created by marianflanagan
+ * Student ID - x16119444
  */
 
 public class PetSitter {

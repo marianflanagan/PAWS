@@ -9,6 +9,10 @@ import com.example.marianflanagan.paws.customer.CustomerLogin;
 import com.example.marianflanagan.paws.pet_sitter.PetSitterLogin;
 import com.example.marianflanagan.paws.R;
 
+/**
+ * Created by marianflanagan
+ * Student ID - x16119444
+ */
 
 public class ActivityLogin extends AppCompatActivity {
 

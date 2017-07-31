@@ -15,9 +15,6 @@ import com.example.marianflanagan.paws.model.Dog;
 
 import java.util.ArrayList;
 
-/**
- * Created by marianflanagan on 31/07/2017.
- */
 
 class CustomBookingsAdapter extends ArrayAdapter<Booking> {
     private ArrayList<Booking> values;

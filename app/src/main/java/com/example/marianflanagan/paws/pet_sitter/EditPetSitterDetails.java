@@ -17,6 +17,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * Created by marianflanagan
+ * Student ID - x16119444
+ */
 
 public class EditPetSitterDetails extends AppCompatActivity {
 

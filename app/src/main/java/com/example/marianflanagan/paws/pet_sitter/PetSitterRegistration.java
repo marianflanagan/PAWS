@@ -17,6 +17,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * Created by marianflanagan
+ * Student ID - x16119444
+ */
 
 public class PetSitterRegistration extends AppCompatActivity {
 

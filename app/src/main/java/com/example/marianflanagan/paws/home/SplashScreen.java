@@ -7,6 +7,11 @@ import android.os.Bundle;
 
 import com.example.marianflanagan.paws.R;
 
+/**
+ * Created by marianflanagan
+ * Student ID - x16119444
+ */
+
 public class SplashScreen extends AppCompatActivity {
     private static final int DELAY_SECONDS = 3000;
 

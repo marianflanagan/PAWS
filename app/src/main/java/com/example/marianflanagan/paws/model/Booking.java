@@ -1,7 +1,7 @@
 package com.example.marianflanagan.paws.model;
-
 /**
- * Created by marianflanagan on 30/07/2017.
+ * Created by marianflanagan
+ * Student ID - x16119444
  */
 
 public class Booking {
@@ -13,7 +13,7 @@ public class Booking {
     String time;
 
     public Booking() {
-        
+
     }
 
     public Booking(String dogName, String customerId, String sitterId, String date, String time) {
