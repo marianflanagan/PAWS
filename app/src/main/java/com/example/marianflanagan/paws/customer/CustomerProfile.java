@@ -111,8 +111,6 @@ public class CustomerProfile extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CustomerProfile.this, CustomerViewBookings.class);
                 startActivity(intent);
-
-
             }
         });
 

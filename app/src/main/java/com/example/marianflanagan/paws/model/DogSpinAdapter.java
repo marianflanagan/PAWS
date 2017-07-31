@@ -1,7 +1,6 @@
 package com.example.marianflanagan.paws.model;
 
 import android.content.Context;
-import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.view.View;

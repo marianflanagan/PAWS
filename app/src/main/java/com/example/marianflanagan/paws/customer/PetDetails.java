@@ -57,8 +57,8 @@ public class PetDetails extends AppCompatActivity {
                 FirebaseUser currentUser = mAuth.getCurrentUser();
                 String userID = currentUser.getUid();
 
-                Dog dog = new Dog(newDogName, newDogBreed,newDogAge ,userID);
-                myRef.child(dog.getName() + newDogBreed + newDogAge ).setValue(dog);
+                Dog dog = new Dog(newDogName, newDogBreed, newDogAge, userID);
+                myRef.child(dog.getName() + newDogBreed + newDogAge).setValue(dog);
 
                 Toast.makeText(PetDetails.this, R.string.dog_entry_success_message, Toast.LENGTH_LONG).show();
                 dogBreed.setText("");

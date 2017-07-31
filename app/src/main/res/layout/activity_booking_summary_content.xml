@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bookingPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Bella" />
+
+        <TextView
+            android:id="@+id/bookingDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="12-07-17" />
+
+        <TextView
+            android:id="@+id/bookingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="12:00"
+
+            />
+
+        <TextView
+            android:id="@+id/bookingSitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Ernestina Pais" />
+</LinearLayout>

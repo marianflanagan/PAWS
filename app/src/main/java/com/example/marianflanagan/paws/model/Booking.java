@@ -4,7 +4,7 @@ package com.example.marianflanagan.paws.model;
  * Created by marianflanagan on 30/07/2017.
  */
 
-public class Bookings {
+public class Booking {
 
     String dogId;
     String customerId;
@@ -12,8 +12,11 @@ public class Bookings {
     String date;
     String time;
 
+    public Booking() {
+        
+    }
 
-    public Bookings(String dogName, String customerId, String sitterId, String date, String time) {
+    public Booking(String dogName, String customerId, String sitterId, String date, String time) {
 
         this.dogId = dogName;
         this.customerId = customerId;

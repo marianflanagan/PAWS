@@ -1,65 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.marianflanagan.paws.customer.BookingServices">
 
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
-        android:layout_marginBottom="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/btnCalendar"
-        android:layout_alignEnd="@+id/btnCalendar"
-        android:layout_alignLeft="@+id/btnCalendar"
-        android:layout_alignStart="@+id/btnCalendar" />
-
     <TextView
         android:id="@+id/tvPet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:textSize="18sp"
-        android:text="@string/select_pet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="39dp"
+        android:text="@string/select_pet"
+        android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/date"
-        android:textSize="18sp"
-        android:layout_below="@+id/btnCalendar"
-        android:layout_alignLeft="@+id/btnCalendar"
-        android:layout_alignStart="@+id/btnCalendar"
-        android:layout_marginTop="22dp"
-        android:layout_alignRight="@+id/btnCalendar"
-        android:layout_alignEnd="@+id/btnCalendar" />
-
-    <TextView
-        android:id="@+id/tvTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_time"
-        android:textSize="18sp"
-        android:layout_above="@+id/spinnerTime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <Spinner
         android:id="@+id/spinnerPet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPet"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPet" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/select_time"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/spinnerTime"
@@ -72,10 +47,30 @@
         android:id="@+id/btnCalendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="@string/select_date"
-        android:onClick="btnCalendar_Click"
-        android:layout_marginTop="68dp"
         android:layout_below="@+id/spinnerPet"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="64dp"
+        android:layout_marginEnd="64dp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/date"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/btnCalendar"
+        android:layout_alignBottom="@+id/btnCalendar"
+        android:layout_alignRight="@+id/tvTime"
+        android:layout_alignEnd="@+id/tvTime" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/next" />
 
 </RelativeLayout>
