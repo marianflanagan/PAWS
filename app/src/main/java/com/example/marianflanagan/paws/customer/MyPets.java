@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,9 +57,9 @@ public class MyPets extends AppCompatActivity {
                 //Setting the listview with name retrieved from database
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(MyPets.this,
                         android.R.layout.simple_list_item_1, dogNames);
-                        list_pets.setAdapter(arrayAdapter);
+                list_pets.setAdapter(arrayAdapter);
 
-                    }
+            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {

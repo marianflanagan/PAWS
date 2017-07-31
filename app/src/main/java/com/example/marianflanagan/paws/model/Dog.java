@@ -1,5 +1,6 @@
 package com.example.marianflanagan.paws.model;
 
+
 /**
  * Created by marianflanagan on 26/07/2017.
  */
@@ -50,3 +51,4 @@ public class Dog {
         this.userId = userId;
     }
 }
+

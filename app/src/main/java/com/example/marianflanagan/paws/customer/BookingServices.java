@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.marianflanagan.paws.R;
 import com.example.marianflanagan.paws.model.Dog;
+import com.example.marianflanagan.paws.model.DogSpinAdapter;
+import com.example.marianflanagan.paws.model.PetSitter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,8 +34,6 @@ import java.util.List;
 
 public class BookingServices extends AppCompatActivity {
 
-    private static final String TAG = "BookingServices";
-
     private TextView tvDate;
     private Button btnCalendar;
     private Button btnNext;
@@ -52,10 +52,10 @@ public class BookingServices extends AppCompatActivity {
         btnCalendar = (Button) findViewById(R.id.btnCalendar);
         btnNext = (Button) findViewById(R.id.btnNext);
         petSpinner = (Spinner) findViewById(R.id.spinnerPet);
-        spinnerTime = (Spinner)  findViewById(R.id.spinnerTime);
+        spinnerTime = (Spinner) findViewById(R.id.spinnerTime);
 
 
-    //method adding times to spinner
+        //method adding times to spinner
 
         ArrayList<String> times = new ArrayList<>();
         times.add("8am");
@@ -85,14 +85,14 @@ public class BookingServices extends AppCompatActivity {
         myRef.child("").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                List<String> dogNames = new ArrayList<String>();
+                ArrayList<Dog> dogNames = new ArrayList<>();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Dog dog = postSnapshot.getValue(Dog.class);
                     if (mAuth.getCurrentUser().getUid().equals(dog.getUserId())) {
-                        dogNames.add(dog.getName());
+                        dogNames.add(dog);
                     }
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(BookingServices.this,
+                DogSpinAdapter adapter = new DogSpinAdapter(BookingServices.this,
                         android.R.layout.simple_spinner_item, dogNames);
                 petSpinner.setAdapter(adapter);
             }
@@ -115,11 +115,9 @@ public class BookingServices extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BookingServices.this, PetSitterSelection.class);
-                startActivity(intent);
+                PetSitterSelection.init(view.getContext(), ((Dog) petSpinner.getSelectedItem()).getName(), tvDate.getText().toString(), (String) spinnerTime.getSelectedItem());
             }
         });
-
 
 
     }

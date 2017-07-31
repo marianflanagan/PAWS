@@ -38,7 +38,8 @@
         <activity android:name=".pet_sitter.EditPetSitterDetails" />
         <activity android:name=".customer.Calendar" />
         <activity android:name=".customer.MyPets" />
-        <activity android:name=".customer.CustomerViewBookings"></activity>
+        <activity android:name=".customer.CustomerViewBookings"/>
+        <activity android:name=".booking.BookingSummaryActivity"/>
     </application>
 
 </manifest>

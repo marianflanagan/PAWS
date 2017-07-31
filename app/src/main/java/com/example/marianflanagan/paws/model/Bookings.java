@@ -6,7 +6,7 @@ package com.example.marianflanagan.paws.model;
 
 public class Bookings {
 
-    String dogName;
+    String dogId;
     String customerId;
     String sitterId;
     String date;
@@ -15,19 +15,19 @@ public class Bookings {
 
     public Bookings(String dogName, String customerId, String sitterId, String date, String time) {
 
-        this.dogName = dogName;
+        this.dogId = dogName;
         this.customerId = customerId;
         this.sitterId = sitterId;
         this.date = date;
         this.time = time;
     }
 
-    public String getDogName() {
-        return dogName;
+    public String getDogId() {
+        return dogId;
     }
 
-    public void setDogName(String dogName) {
-        this.dogName = dogName;
+    public void setDogId(String dogId) {
+        this.dogId = dogId;
     }
 
     public String getCustomerId() {
